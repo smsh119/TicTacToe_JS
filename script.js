@@ -3,6 +3,8 @@ const box2d = [boxes.slice(0,3),boxes.slice(3,6),boxes.slice(6)];
 const playerTurnDisplay = document.getElementById("playerTurnDisplay");
 const restartBtn = document.getElementById("restartBtn");
 
+const tacSound = new Audio('tac.wav');
+
 let currentPlayer = 1;
 let selectedBox = 0;
 
@@ -21,6 +23,7 @@ restartBtn.addEventListener('click',restartGame);
 
 function handleBoxClick(e){
     if(e.target.innerHTML!=="" || selectedBox>=9)return;
+    tacSound.play();
     e.target.innerHTML = currentPlayer===1?"X":"O";
  
     if(hasWon()){
