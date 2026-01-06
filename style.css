@@ -1,84 +1,99 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
 }
 
-body{
-    padding: 20px;
-    background-image: url('./bg.jpg');
-    background-size: cover;
-    height: 500px;
+html {
+  height: 100%;
 }
 
-.container{
-    width: 500px;
-    margin: auto;
+body {
+  padding: 20px;
+  background-image: url("./bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90%;
 }
 
-h1{
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 3rem;
+.container {
+  max-width: 350px;
+  margin: auto;
 }
 
-.row{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
-.box{
-    /* border: 5px solid rgb(255, 255, 255); */
-    width: 33%;
-    min-height: 130px;
-    background-color:rgb(163, 249, 252);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 7rem;
-    cursor: pointer;
-    border-radius: 10px;
-    color: brown;
-    opacity: .7;
-}
-.box:hover{
-    opacity: .9;
+@media screen and (max-width: 350px) {
+  .container {
+    max-width: 90%;
+  }
 }
 
-.footer{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-#playerTurnDisplay{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 20px;
-    padding: 10px 100px 10px 100px;
-    border-radius: 20px;
-    /* background-color:rgba(163, 249, 252, 0.644); */
+.box {
+  /* border: 5px solid rgb(255, 255, 255); */
+  width: 33%;
+  aspect-ratio: 1/1;
+  background-color: rgb(163, 249, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  color: brown;
+  opacity: 0.7;
+  transition: color 0.3s, opacity 0.3s;
+}
+.box:hover {
+  opacity: 0.9;
 }
 
-#restartBtn{
-    width: 200px;
-    height: 50px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 1rem;
-    opacity: .7;
-    background-color: rgb(252, 208, 87);
-    color: black;
-    cursor: pointer;
-}
-#restartBtn:hover{
-    opacity: 1;
+@media screen and (max-width: 350px) {
+  .box {
+    font-size: 4rem;
+  }
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
+#playerTurnDisplay {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+#restartBtn {
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  opacity: 0.7;
+  background-color: rgb(252, 208, 87);
+  color: black;
+  cursor: pointer;
+}
+#restartBtn:hover {
+  opacity: 1;
+}

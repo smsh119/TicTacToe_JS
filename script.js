@@ -25,19 +25,22 @@ function handleBoxClick(e){
     if(e.target.innerHTML!=="" || selectedBox>=9)return;
     tacSound.play();
     e.target.innerHTML = currentPlayer===1?"X":"O";
- 
+
     if(hasWon()){
         switchPlayerDisplay('haswon');
         selectedBox = 10;
         restartBtn.style.display = "inline-block";
         return;
     }
+
     selectedBox++;
+
     if(selectedBox>=9){
         switchPlayerDisplay('gameover');
         restartBtn.style.display = "inline-block";
         return;
     }
+
     currentPlayer = currentPlayer===1?2:1;
     switchPlayerDisplay();
 }
@@ -69,5 +72,13 @@ function hasWon(){
 }
 
 function restartGame(){
-    location.reload();
+    currentPlayer = 1;
+    selectedBox = 0;
+    for(let row of box2d){
+        for(let x of row){
+            x.innerHTML = "";
+        }
+    }
+    restartBtn.style.display = "none";
+    switchPlayerDisplay();
 }
