@@ -39,6 +39,7 @@ That’s it — the game runs entirely in the browser.
 ## 🕒 Timeline
 
 - **October 2023** — Developed using HTML, CSS, and JavaScript
+- **January 2026** — Clean up, improved responsiveness, and bug fixes for representational purposes.
 
 ## 🎯 Purpose
 
