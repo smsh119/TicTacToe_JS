@@ -49,4 +49,8 @@ This project was created to:
 - Build confidence in logic-driven UI development
 - Demonstrate problem-solving skills through a classic game implementation
 
+## 🔗 Live Demo
+
+[View the live demo](https://smsh119.github.io/TicTacToe_JS/)
+
 > A small project that highlights the importance of strong fundamentals in web development.
